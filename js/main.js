@@ -122,6 +122,7 @@
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
+        autoplayTimeout: 10000, // 每頁停留時間為 10000 毫秒 (10 秒)
         items: 1,
         dots: false,
         loop: true,
