@@ -27,6 +27,36 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+<script>
+function toggleMore() {
+    var moreText = document.getElementById("more-text");
+    var toggleButton = document.getElementById("toggle-button");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        toggleButton.textContent = "收起";
+    } else {
+        moreText.style.display = "none";
+        toggleButton.textContent = "閱讀更多";
+    }
+}
+</script>
+
+<style>
+/* 允許內容顯示完全 */
+.col-sm-7 {
+    height: auto !important; /* 確保展開時高度自適應 */
+    overflow: visible; /* 允許超出內容顯示 */
+}
+
+/* 如果需要滾動條的樣式 */
+.col-sm-7.max-height-scroll {
+    max-height: 300px; /* 可調整高度限制 */
+    overflow-y: auto;  /* 滾動條 */
+}
+</style>
+
 </head>
 
 <body>
@@ -109,6 +139,55 @@
                     <div class="blog-item">
                         <div class="row g-0 bg-light overflow-hidden">
                             <div class="col-12 col-sm-5 h-100">
+                                <img class="img-fluid h-100" src="img/day3.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="bi bi-bookmarks me-2"></i>第三次出班</small>
+                                        <small><i class="bi bi-calendar-date me-2"></i>08 Aug,2024</small>
+                                    </div>
+                                    
+                                    <p>🌱清晨五點鐘的施肥紀錄<p>
+                                        在窗外的景色還未被太陽照亮時，已經有一群人準備好出門工作了⋯組長揉著有點張不開的眼睛，摸黑一同前往觀摩施肥的活動。<p>
+                                        適量的施肥除了能幫助植株健康長大外，還能增強土壤的保水度，改善水稻對病蟲害、不良環境的抵抗力喔！</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="blog-item">
+                        <div class="row g-0 bg-light overflow-hidden">
+                            <div class="col-12 col-sm-5 h-100">
+                                <img class="img-fluid h-100" src="img/day4.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="bi bi-bookmarks me-2"></i>第四次出班</small>
+                                        <small><i class="bi bi-calendar-date me-2"></i>17 Nov, 2024</small>
+                                    </div>
+                                    <p>
+                                        🌞接近年尾，仍是31°C的台南<p>不斷被颱風影響而延期到今天的拍攝日⋯一下火車，迎接我們的是超級熱情的太陽！讓人不禁懷疑南部的冬天到底需不需要穿長袖呢？<p>這次無論是坐在運送稻穗的大貨車上，還是聽著阿嬤一邊曬著稻穀，一邊侃侃而談一路走來
+                                        <span id="more-text" style="display: none;">
+                                            的故事，對於我們來說都是很新奇的體驗呢！<br><br>今天的空拍機也拍攝的很順利～還認識了新的小夥伴——肉圓🐶
+                                        </span>
+                                        <a href="javascript:void(0);" id="toggle-button" onclick="toggleMore()">閱讀更多</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                           
+            </div>
+            <br>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="blog-item">
+                        <div class="row g-0 bg-light overflow-hidden">
+                            <div class="col-12 col-sm-5 h-100">
                                 <img class="img-fluid h-100" src="img/money.jpg" style="object-fit: cover;">
                             </div>
                             <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
@@ -146,12 +225,11 @@
                             </div>
                         </div>
                     </div>
-            
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Blog End -->
 
     <!-- Team Start -->
@@ -187,10 +265,6 @@
                     <a class="text-body" href="">網站條款及細則</a>
                     <span class="mx-1">|</span>
                     <a class="text-body" href="">隱私權政策</a>
-                    <span class="mx-1">|</span>
-                    <a class="text-body" href="">幫助</a>
-                    <span class="mx-1">|</span>
-                    <a class="text-body" href="">Q&A</a>
                 </div>
             </div>
         </div>
