@@ -30,7 +30,7 @@
     
 <script>
 function toggleMore() {
-    var moreText = document.getElementById("more-text");
+    var moreText= document.getElementById("more-text");
     var toggleButton = document.getElementById("toggle-button");
 
     if (moreText.style.display === "none") {
@@ -41,6 +41,34 @@ function toggleMore() {
         toggleButton.textContent = "閱讀更多";
     }
 }
+// 為第一個區塊的「閱讀更多」按鈕和內容設置 toggle 函式
+function toggleMore1() {
+    var moreText = document.getElementById("more-text-1");
+    var toggleButton = document.getElementById("toggle-button-1");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        toggleButton.textContent = "收起";
+    } else {
+        moreText.style.display = "none";
+        toggleButton.textContent = "閱讀更多";
+    }
+}
+
+// 為第二個區塊的「閱讀更多」按鈕和內容設置 toggle 函式
+function toggleMore2() {
+    var moreText = document.getElementById("more-text-2");
+    var toggleButton = document.getElementById("toggle-button-2");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        toggleButton.textContent = "收起";
+    } else {
+        moreText.style.display = "none";
+        toggleButton.textContent = "閱讀更多";
+    }
+}
+
 </script>
 
 <style>
@@ -139,13 +167,71 @@ function toggleMore() {
                     <div class="blog-item">
                         <div class="row g-0 bg-light overflow-hidden">
                             <div class="col-12 col-sm-5 h-100">
+                                <img class="img-fluid h-100" src="img/day5.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="bi bi-bookmarks me-2"></i>第五次出班</small>
+                                        <small><i class="bi bi-calendar2-check"></i> &nbsp;14 Jan, 2025</small>
+                                    </div>
+                                    <p>🌼「在油菜花田裡紀錄美好的永恆」</p>
+                                    <p>
+                                        今天少女們來到台南研發飯糰啦！<br>我們一起去超市和街邊的雜貨店採買食材，回到家後一人一碗白飯共同鑽研各種配料的組合！邊吃邊討論大眾口味以及接受度，才了解到原來賣食物是一件很不容易的事情。
+                                    <!-- 第一個區塊 -->
+                                    <span id="more-text-1" style="display: none;">
+                                        <br><br>忙碌過後，大家一同到油菜花田拍下美美的照片，為收割期做一個完美的結束。<br><br>接下來準備進行到設計環節，各種文宣、周邊品都慢慢要破繭而出啦！大家可以期待一下唷～
+                                    </span>
+                                    <a href="javascript:void(0);" id="toggle-button-1" onclick="toggleMore1()">閱讀更多</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="blog-item">
+                        <div class="row g-0 bg-light overflow-hidden">
+                            <div class="col-12 col-sm-5 h-100">
+                                <img class="img-fluid h-100" src="img/day4.jpg" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="bi bi-bookmarks me-2"></i>第四次出班</small>
+                                        <small><i class="bi bi-calendar2-check"></i> &nbsp;17 Nov, 2024</small>
+                                    </div>
+                                    <p>🌞接近年尾，仍是31°C的台南</p>
+                                    <p>
+                                        不斷被颱風影響而延期到今天的拍攝日⋯一下火車，迎接我們的是超級熱情的太陽！讓人不禁懷疑南部的冬天到底需不需要穿長袖呢？
+                                    <p>
+                                        這次無論是坐在運送稻穗的大貨車上，還是聽著阿嬤一邊曬著稻穀，一邊侃侃而談一路走來
+                                    <!-- 第二個區塊 -->
+                                    <span id="more-text-2" style="display: none;">
+                                        的故事，對於我們來說都是很新奇的體驗呢！<br><br>今天的空拍機也拍攝的很順利～還認識了新的小夥伴——肉圓🐶
+                                    </span>
+                                    <a href="javascript:void(0);" id="toggle-button-2" onclick="toggleMore2()">閱讀更多</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="blog-item">
+                        <div class="row g-0 bg-light overflow-hidden">
+                            <div class="col-12 col-sm-5 h-100">
                                 <img class="img-fluid h-100" src="img/day3.jpg" style="object-fit: cover;">
                             </div>
                             <div class="col-12 col-sm-7 h-100 d-flex flex-column justify-content-center">
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
                                         <small class="me-3"><i class="bi bi-bookmarks me-2"></i>第三次出班</small>
-                                        <small><i class="bi bi-calendar-date me-2"></i>08 Aug,2024</small>
+                                        <small><i class="bi bi-calendar2-check"></i> &nbsp;08 Aug, 2024</small>
                                     </div>
                                     
                                     <p>🌱清晨五點鐘的施肥紀錄<p>
@@ -167,7 +253,7 @@ function toggleMore() {
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
                                         <small class="me-3"><i class="bi bi-bookmarks me-2"></i>第四次出班</small>
-                                        <small><i class="bi bi-calendar-date me-2"></i>17 Nov, 2024</small>
+                                        <small><i class="bi bi-calendar2-check"></i> &nbsp;17 Nov, 2024</small>
                                     </div>
                                     <p>
                                         🌞接近年尾，仍是31°C的台南<p>不斷被颱風影響而延期到今天的拍攝日⋯一下火車，迎接我們的是超級熱情的太陽！讓人不禁懷疑南部的冬天到底需不需要穿長袖呢？<p>這次無論是坐在運送稻穗的大貨車上，還是聽著阿嬤一邊曬著稻穀，一邊侃侃而談一路走來
@@ -194,7 +280,7 @@ function toggleMore() {
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
                                         <small class="me-3"><i class="bi bi-bookmarks me-2"></i>第一次出班</small>
-                                        <small><i class="bi bi-calendar-date me-2"></i>08 Jun, 2024</small>
+                                        <small><i class="bi bi-calendar2-check"></i> &nbsp;08 Jun, 2024</small>
                                     </div>
                                     
                                     <p>📍台南六甲 體感溫度37°C<p>
@@ -216,7 +302,7 @@ function toggleMore() {
                                 <div class="p-4">
                                     <div class="d-flex mb-3">
                                         <small class="me-3"><i class="bi bi-bookmarks me-2"></i>第二次出班</small>
-                                        <small><i class="bi bi-calendar-date me-2"></i>20 Jul, 2024</small>
+                                        <small><i class="bi bi-calendar2-check"></i> &nbsp;20 Jul, 2024</small>
                                     </div>
                                     
                                     <p>🌧️「出班日·陰晴不定」<p>唯一的小敗筆就是討人厭的午後雷陣雨⋯⋯！不過我們也因此在這天獲得了第一件團服——雨衣。<p>為了紀念此刻，我們用相機倒數計時拍了無數次⋯回想起來是很可愛的回憶呢～</p>
