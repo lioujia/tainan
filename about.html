@@ -78,6 +78,90 @@
         .next {
             right: 10px;
         }
+
+        /* 以下是圖片方塊的設置 */
+         {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+    }
+
+         {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0; /* 移除 padding 避免額外空隙 */
+    gap: 0; /* 設定 gap 為 0，圖片之間不留空隙 */
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; /* 移除超連結底線 */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* 確保圖片填滿格子 */
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* 滑鼠移動到圖片時放大 */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 半透明黑色背景 */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* 以下是圖文的文字區塊 */
+.brand-section {
+    background-color: #f5eee0; /* 米色背景 */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.brand-section h2 {
+    font-size: 24px;
+    color: #8b5e3c; /* 深棕色 */
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.brand-section h3 {
+    font-size: 28px;
+    color: #5a3e2b;
+    margin-bottom: 15px;
+}
+
+.brand-section p {
+    font-size: 18px;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+ .brand-section h2 {
+        font-size: 20px; /* 這裡可以根據您的需求調整字體大小 */
+    }
     </style>
 </head>
 
@@ -260,10 +344,29 @@ function closeVideo() {
     </div>
 
     <!-- 紀錄片Blog End -->
+<br>
+    <!-- 圖文 Start -->
+    <div class="brand-section">
+        <h2>Rice Growth Stages</h2>
+        <h3>稻米的一生</h3>
+        <p>稻米的生命歷程主要分為三個時期：營養生長期、生殖生長期、成熟期</p>
+    </div>
 
-    <!-- Team Start -->
-    
-    <!-- Team End -->
+    <div class="grid-container">
+        <a href="first.html#section1" class="grid-item">
+            <img src="img/rice rolls.jpg" alt="營養生長期">
+            <div class="overlay">營養生長期</div>
+        </a>
+        <a href="first.html#section2" class="grid-item">
+            <img src="img/product1017.jpg" alt="生殖生長期">
+            <div class="overlay">生殖生長期</div>
+        </a>
+        <a href="first.html#section3" class="grid-item">
+            <img src="img/third.jpg" alt="成熟期">
+            <div class="overlay">成熟期</div>
+        </a>
+    </div>    
+    <!-- 圖文 End -->
 
 
     <!-- Footer Start -->
