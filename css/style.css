@@ -115,13 +115,13 @@
 }
 
 .hero-header {
-    background: url(../img/home1025.jpg) top right no-repeat;
+    background: url(../img/home0301.jpg) top right no-repeat;
     background-size: cover; width: 100%; height: 700px;
 }
 
 
 .bg-about {
-    background: url(../img/publicize.jpg) top right no-repeat;
+    background: url(../img/aboutbg.jpg) top right no-repeat;
     background-size: cover;width: 100%; height: 700px;
 }
 
@@ -301,7 +301,7 @@ button:hover {
 }
 
 .bg-offer {
-    background: url(../img/aboutus.jpg) top right no-repeat;
+    background: url(../img/aboutus0301.jpg) top right no-repeat;
     background-size: cover;width: 100%; height: 700px;
 }
 
