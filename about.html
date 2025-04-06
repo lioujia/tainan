@@ -162,7 +162,34 @@
  .brand-section h2 {
         font-size: 20px; /* 這裡可以根據您的需求調整字體大小 */
     }
+
+    .popover-box {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 999;
+  width: 320px;
+}
+
+.popover-content {
+  position: relative;
+}
+
+.close-popover {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  cursor: pointer;
+  color: #999;
+  font-size: 16px;
+}
     </style>
+
+
 </head>
 
 <body>
@@ -374,6 +401,106 @@ function closeVideo() {
      <img class="w-100 h-50 rounded" src="img/period.jpg" style="object-fit: cover;">
     <!-- 生長時期 End -->
 
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="border-start border-5 border-primary ps-5 mb-5" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase">Know Your Rice</h6>
+                <h1 class="display-6 text-uppercase mb-0">米的知識</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <div>
+                            <h5 class="text-uppercase mb-3">一、台灣米大多是稉（ㄍㄥˇ）米</h5>
+                            <p>台灣人愛吃口感Q彈的米，像是壽司米，就是屬於稉米，煮起來比較黏，適合配中式或日式料理。</p> 
+                            <a id="openPopover" class="text-primary text-uppercase" href="javascript:void(0);" style="position: relative;">
+  其他種類 <i class="bi bi-chevron-right"></i>
+</a>
+
+<div id="popoverBox" class="popover-box">
+  <div class="popover-content">
+    <span class="close-popover">&times;</span>
+ <p>
+  <strong>【米的種類】</strong><br>
+  <strong>稉（ㄍㄥˇ）米：</strong>台灣常見，口感Q彈，適合做飯糰、壽司、便當。<br>
+  <strong>秈（ㄒㄧㄢ）米：</strong>像泰國米、越南米，顆粒分明、較乾爽，適合炒飯或搭配咖哩。<br>
+  <strong>糯米：</strong>用來做粽子、米糕，煮起來黏性高，甜鹹皆宜。
+</p>
+  </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <div>
+                            <h5 class="text-uppercase mb-3">二、台灣一年種兩次稻</h5>
+                            <p>台灣因為氣候溫暖，大部分地區一年可種兩次稻，稱為一、二期稻作，主要在每年的2月與7月播種。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <div>
+                            <h5 class="text-uppercase mb-3">三、一碗飯大約需要3,000～5,000顆米粒！</h5>
+                            <p>別看一碗飯不大，它裡面藏著幾千顆小小米粒，是農民辛苦的結晶。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <div>
+                            <h5 class="text-uppercase mb-3">四、米是稻子脫殼之後的樣子！</h5>
+                            <p>稻子收割後，經過脫殼、碾米才變成白白亮亮的米粒哦！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class=""></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">五、越新鮮的米越好吃</h5>
+                            <p>米也有「賞味期」！新米通常在收割後三個月內風味最佳，煮起來更香Q。</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class=""></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">六、米飯裡也有蛋白質！</h5>
+                            <p>雖然米主要是澱粉，其實每100克白米中也有約2～3克的蛋白質，是身體能量的來源之一。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class=""></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">七、「糙米」比較健康？</h5>
+                            <p>糙米保留了米的外殼（糠層），含有更多膳食纖維與維生素B群，但煮起來比較硬，有時需要泡水久一點。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="service-item bg-light d-flex p-4">
+                        <i class=""></i>
+                        <div>
+                            <h5 class="text-uppercase mb-3">八、台灣有哪些好米？</h5>
+                            <p>
+                            台灣有很多知名的米品種，例如：<br>池上米：來自台東池上，水質好、口感Q彈 <span id="more-text" style="display: none;"><br>關山米：黏度高、香氣濃郁<br>益全香米：帶有淡淡芋頭香，被稱為台灣的香米！<br>
+                            台梗十一號（六甲米）：這是來自台南六甲區的優質品種，種在陽光充足、水質清澈的環境裡，煮起來粒粒分明、帶點自然甜味，是很多媽媽指定用來煮便當、炒飯的愛米之一喔！</span>
+                            <a href="javascript:void(0);" id="toggle-button" onclick="toggleMore()">...閱讀更多</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
     <!-- Footer Start -->
     <div class="container-fluid bg-light mt-5 py-5">
         <div class="container pt-5">
@@ -408,7 +535,7 @@ function closeVideo() {
     </div>
 <div class="container-fluid bg-dark text-white-50 py-4">
     <div class="col-12 text-center text-body">
-        <a style="color:#8996A0;">Copyright © 2024 靜宜大學大眾傳播學系 六甲裡有六甲田</a>
+        <a style="color:#8996A0;">Copyright © 2024-2025 靜宜大學大眾傳播學系 六甲裡有六甲田</a>
     </div>
 </div>
     <!-- Footer End -->
@@ -428,6 +555,54 @@ function closeVideo() {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+<!-- 以下這個是米知識的種類補充的彈跳框設置 -->
+<script>
+  const trigger = document.getElementById("openPopover");
+  const popover = document.getElementById("popoverBox");
+  const closeBtn = document.querySelector(".close-popover");
+
+  trigger.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // 取得觸發元件的位置
+    const rect = trigger.getBoundingClientRect();
+
+    // 顯示 popover 並設定位置
+    popover.style.display = "block";
+    popover.style.top = `${rect.top + window.scrollY}px`; // 垂直位置
+    popover.style.left = `${rect.right + 10 + window.scrollX}px`; // 水平位置（靠右 10px）
+  });
+
+  closeBtn.addEventListener("click", function () {
+    popover.style.display = "none";
+  });
+
+  // 點擊頁面其他區域時關閉
+  document.addEventListener("click", function (e) {
+    if (!popover.contains(e.target) && !trigger.contains(e.target)) {
+      popover.style.display = "none";
+    }
+  });
+</script>
+<!-- 以上這個是米知識的種類補充的彈跳框設置 -->
+
+<!-- 以下這個是米知識最後一個的閱讀更多的設置 -->
+<script>
+    function toggleMore() {
+        var moreText = document.getElementById("more-text");
+        var btn = document.getElementById("toggle-button");
+
+        if (moreText.style.display === "none") {
+            moreText.style.display = "inline";
+            btn.textContent = "收起";
+        } else {
+            moreText.style.display = "none";
+            btn.textContent = "...閱讀更多";
+        }
+    }
+</script>
+<!-- 以上這個是米知識最後一個的閱讀更多的設置 -->
+
     <!-- Video Popup Start -->
 <!-- 新增一個全螢幕遮罩來覆蓋整個頁面 -->
 <div id="videoOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
@@ -438,6 +613,8 @@ function closeVideo() {
     <iframe id="popupVideo" width="672" height="378" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <!-- Video Popup End -->
+
+
 
 </body>
 
